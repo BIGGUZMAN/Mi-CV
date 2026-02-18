@@ -1,0 +1,272 @@
+/* ==========================================================================
+   Reset y base
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.65;
+  color: #0f172a;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ==========================================================================
+   Variables (light & dark)
+   ========================================================================== */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: #e2e8f0;
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+html.dark {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ==========================================================================
+   Botón toggle tema
+   ========================================================================== */
+#modoOscuro {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
+  padding: 0.65rem 1.1rem;
+  border-radius: 9999px;
+  border: none;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modoOscuro:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+html.dark #modoOscuro {
+  background: var(--primary);
+  color: #0f172a;
+}
+
+html.dark #modoOscuro:hover {
+  background: var(--primary-dark);
+}
+
+/* ==========================================================================
+   Header / Hero
+   ========================================================================== */
+header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem 4.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25);
+  margin-bottom: 3.5rem;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 6vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+}
+
+header p {
+  font-size: 1.35rem;
+  opacity: 0.92;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Contenedor principal
+   ========================================================================== */
+main {
+  max-width: 920px;
+  margin: -3.5rem auto 5rem;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   Secciones / Cards
+   ========================================================================== */
+section {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+section p {
+  color: var(--text-muted);
+  font-size: 1.08rem;
+}
+
+/* ==========================================================================
+   Listas y skills
+   ========================================================================== */
+.tools,
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.tools span,
+.tools-grid span,
+.tools div,
+.tools-grid div {
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--primary);
+  padding: 0.65rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.98rem;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+ul {
+  padding-left: 1.6rem;
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  padding-left: 1.5rem;
+}
+
+ul li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   Modo oscuro – ajustes específicos
+   ========================================================================== */
+html.dark header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.4);
+}
+
+html.dark section {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+html.dark .tools span,
+html.dark .tools-grid span {
+  background: rgba(96, 165, 250, 0.12);
+  color: var(--primary);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+html.dark ul li {
+  color: var(--text-muted);
+}
+
+html.dark ul li::before {
+  color: var(--primary);
+}
+
+/* Limpieza Nuxt / Vue contenedores */
+html.dark #app,
+html.dark #__nuxt,
+html.dark #__layout,
+html.dark .nuxt-container,
+html.dark .page {
+  background: transparent !important;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  header {
+    padding: 4.5rem 1rem 3.5rem;
+  }
+  header h1 {
+    font-size: 2.6rem;
+  }
+  main {
+    margin-top: -2.5rem;
+  }
+}
