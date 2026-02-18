@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Aaron Guzmán</title>
+    <link rel="icon" href="img/icono.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button id="modoOscuro">🌙</button>
+
+    <header>
+        <h1>Aaron Antonio Guzmán Morán</h1>
+        <p>Estudiante de Tecnologías de la Información</p>
+    </header>
+
+    <main>
+
+        <section class="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>
+                Estudiante de Tecnologías de la Información con interés en el desarrollo
+                de software y la mejora de procesos mediante soluciones tecnológicas.
+                Tengo experiencia académica en programación, bases de datos y desarrollo
+                web, y he participado en dos proyectos de migración: uno de servidor a
+                servidor y otro de un gestor de bases de datos a otro diferente.
+                Busco seguir desarrollando mis habilidades y aportar valor en proyectos reales.
+            </p>
+        </section>
+
+        <section class="habilidades">
+            <h2>Herramientas</h2>
+            <ul>
+                <li>SQL Server</li>
+                <li>Oracle</li>
+                <li>Python</li>
+                <li>Redes</li>
+            </ul>
+        </section>
+
+        <section class="idiomas">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Inglés básico</li>
+            </ul>
+        </section>
+
+        <section class="experiencia">
+            <h2>Experiencia laboral</h2>
+            <ul>
+                <li>
+                    Migración de SQL Server 2012 a SQL Server 2019
+                    de servidor a servidor.
+                </li>
+                <li>
+                    Automatización de una base de datos SQL Server mediante
+                    stored procedures para eliminar registros y enviarlos
+                    a bases temporales mensuales.
+                </li>
+            </ul>
+        </section>
+
+        <!-- NUEVA SECCIÓN -->
+        <section class="logros">
+            <h2>Logros técnicos</h2>
+            <ul>
+                <li>Migración exitosa de bases de datos sin pérdida de información.</li>
+                <li>Automatización de procesos SQL mediante stored procedures.</li>
+                <li>Optimización y organización de datos en bases SQL Server.</li>
+            </ul>
+        </section>
+
+        <!-- NUEVA SECCIÓN -->
+        <section class="softskills">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Resolución de problemas</li>
+                <li>Aprendizaje rápido</li>
+                <li>Adaptabilidad a nuevas tecnologías</li>
+                <li>Comunicación técnica</li>
+            </ul>
+        </section>
+
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <p><strong>Correo:</strong> aaronmoran20148@gmail.com</p>
+            <p><strong>Teléfono:</strong> 5548037442</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - CV Personal</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById("modoOscuro");
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+        });
+    </script>
+
+</body>
+</html>

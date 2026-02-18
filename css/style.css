@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* BOTÓN MODO OSCURO */
+#modoOscuro {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #1f2933;
+    color: white;
+    font-size: 16px;
+}
+
+/* HEADER */
+header {
+    background-color: #1f2933;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* CONTENIDO */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+section h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* LISTAS */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e5e7eb;
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* EXPERIENCIA */
+.experiencia ul,
+.idiomas ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.experiencia ul li,
+.idiomas ul li {
+    background: transparent;
+    display: list-item;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #1f2933;
+    color: white;
+    padding: 10px;
+}
+
+/* 🌙 MODO OSCURO */
+body.dark {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark section {
+    background-color: #1e1e1e;
+}
+
+body.dark header,
+body.dark footer {
+    background-color: black;
+}
+
+body.dark ul li {
+    background-color: #333;
+}
