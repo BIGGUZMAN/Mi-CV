@@ -1,19 +1,26 @@
-<<template>
+<template>
   <div class="cv-container">
-    <button class="theme-toggle" @click="toggleDarkMode">
+    <!-- Partículas fosforescentes -->
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+
+    <button id="modoOscuro" @click="toggleDarkMode">
       {{ isDark ? '☀️' : '🌙' }} Modo {{ isDark ? 'Claro' : 'Oscuro' }}
     </button>
 
-    <header class="hero">
+    <header>
       <h1>Aaron Antonio Guzmán Morán</h1>
-      <p class="title">Estudiante de Tecnologías de la Información</p>
+      <p>Estudiante de Tecnologías de la Información</p>
       <div class="contact-bar">
         <span>📧 aaronmoran20148@gmail.com</span>
         <span>📱 55 4803 7442</span>
       </div>
     </header>
 
-    <main class="content">
+    <main>
       <section class="card">
         <h2>Sobre mí</h2>
         <p>
@@ -47,14 +54,8 @@
       <section class="card">
         <h2>Experiencia relevante</h2>
         <ul class="experience-list">
-          <li>
-            Migración de SQL Server 2012 → SQL Server 2019 (servidor físico a
-            servidor físico)
-          </li>
-          <li>
-            Automatización de base de datos SQL Server mediante stored
-            procedures (archivado mensual automático)
-          </li>
+          <li>Migración de SQL Server 2012 → SQL Server 2019 (servidor físico a servidor físico)</li>
+          <li>Automatización de base de datos SQL Server mediante stored procedures (archivado mensual automático)</li>
         </ul>
       </section>
 
@@ -62,13 +63,8 @@
         <h2>Logros técnicos destacados</h2>
         <ul class="achievements">
           <li>Migración exitosa sin pérdida de datos ni downtime crítico</li>
-          <li>
-            Implementación de automatización que redujo tiempo manual en >90%
-          </li>
-          <li>
-            Reorganización y optimización de estructuras de datos en entornos
-            productivos
-          </li>
+          <li>Implementación de automatización que redujo tiempo manual en >90%</li>
+          <li>Reorganización y optimización de estructuras de datos en entornos productivos</li>
         </ul>
       </section>
 
@@ -100,9 +96,3 @@ const toggleDarkMode = () => {
   document.documentElement.classList.toggle('dark', isDark.value)
 }
 </script>
-
-
-
-
-
-

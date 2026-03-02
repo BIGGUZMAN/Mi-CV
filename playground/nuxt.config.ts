@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s Mi Presentacion',
-
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],

@@ -33,6 +33,7 @@ body {
   --primary-dark: #1d4ed8;
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+  --primary-rgb: 59, 130, 246; 
 }
 
 html.dark {
@@ -45,6 +46,7 @@ html.dark {
   --primary-dark: #3b82f6;
   --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --primary-rgb: 96, 165, 250;
 }
 
 body {
@@ -165,7 +167,6 @@ section p {
   color: var(--text-muted);
   font-size: 1.08rem;
 }
-
 /* ==========================================================================
    Listas y skills
    ========================================================================== */
@@ -268,5 +269,49 @@ html.dark .page {
   }
   main {
     margin-top: -2.5rem;
+  }
+}
+
+/* Fondo animado con partículas fosforescentes */
+.cv-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 12px rgba(var(--primary-rgb), 0.9); /* efecto fosforescente */
+  opacity: 0.8;
+  animation: float 20s linear infinite;
+}
+
+html.dark .particle {
+  background: var(--primary);
+  box-shadow: 0 0 16px rgba(var(--primary-rgb), 1);
+}
+
+/* Animaciones */
+@keyframes float {
+  0%   { transform: translateY(0) translateX(0) scale(1); }
+  50%  { transform: translateY(-40px) translateX(20px) scale(1.2); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
+}
+
+/* Ejemplo de varias partículas */
+.particle:nth-child(1) { width: 8px; height: 8px; top: 20%; left: 30%; animation-duration: 18s; }
+.particle:nth-child(2) { width: 12px; height: 12px; top: 50%; left: 60%; animation-duration: 22s; }
+.particle:nth-child(3) { width: 10px; height: 10px; top: 70%; left: 20%; animation-duration: 25s; }
+.particle:nth-child(4) { width: 14px; height: 14px; top: 40%; left: 80%; animation-duration: 28s; }
+.particle:nth-child(5) { width: 9px; height: 9px; top: 30%; left: 50%; animation-duration: 20s; }
+
+/* Reducción de intensidad en móviles */
+@media (max-width: 768px) {
+  .particle {
+    opacity: 0.6;
+    box-shadow: 0 0 8px rgba(var(--primary-rgb), 0.7);
   }
 }
